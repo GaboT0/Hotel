@@ -13,18 +13,35 @@
            
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
+<<<<<<< HEAD
                 <h3>Precio</h3>
                 <p></p>
+=======
+                <h3>Habitacioón</h3>
+                <p> 
+                Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
+                que proporcionaremos un lugar limpio y cómodo para alojarse.​
+                </p>
+>>>>>>> 05ca9f190848bc9b243a98992459839f04e2a7ad
             </div>
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
-                <h3>Seguridad</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <h3>Su salud</h3>
+                <p>
+                Con la Promesa de limpieza Hotel 5 estrellas®, 
+                los huéspedes pueden estar seguros que lo bueno no es suficiente ya que estamos 
+                comprometidos con elevados niveles de limpieza. Eso significa habitaciones limpias, 
+                bien mantenidas y ordenadas que cumplen con nuestros estándares. Si esto no es lo que 
+                encuentras tras tu registro de entrada, prometemos corregirlo.
+                </p>
             </div>
             <div class="icono">
                 <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
-                <h3>A Tiempo</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <h3>Recepción</h3>
+                <p>
+                Una experiencia eficiente en el registro de entrada y 
+                el registro de salida le permite seguir su camino con facilidad y rapidez.
+                </p>
             </div>
         </div>
     </main>
@@ -35,53 +52,57 @@
         <div class="contenedor-anuncios">
             <div class="anuncio">
                 <picture>
-                    <source srcset="build/img/anuncio1.webp" type="image/webp">
+                    <source srcset="build/img/sgarden.webp" type="image/webp">
                     <source srcset="build/img/anuncio1.jpg" type="image/jpeg">
                     <img loading="lazy" src="build/img/anuncio1.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Casa de Lujo en el Lago</h3>
-                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
-                    <p class="precio">$3,0000,000</p>
+                    <h3>SUITE GARDEN</h3>
+                    <p>Una habitación coloreada por el verde de la selva maya y nuestros 
+                        jardines. La vista se complementa con su diseño mexicano contemporáneo.</p>
+                    <p class="precio">$21,542.40 MXN</p>
 
                     <ul class="iconos-caracteristicas">
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
+                            <p>8</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
+                            <p>4</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>4</p>
+                            <p>12</p>
                         </li>
                     </ul>
 
                     <a href="anuncio.html" class="boton-amarillo-block">
-                        Ver Propiedad
+                        Ver habitación
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
             <div class="anuncio">
                 <picture>
-                    <source srcset="build/img/anuncio2.webp" type="image/webp">
+                    <source srcset="build/img/oceanview.webp" type="image/webp">
                     <source srcset="build/img/anuncio2.jpg" type="image/jpeg">
                     <img loading="lazy" src="build/img/anuncio2.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Casa terminados de lujo</h3>
-                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
-                    <p class="precio">$3,0000,000</p>
+                    <h3>SUITE OCEAN VIEW</h3>
+                    <p>La habitación ideal para admirar el mar turquesa y la 
+                        abundante vegetación del paraíso en el que nos encontramos.</p>
+                        &nbsp;
+                     ;
+                    <p class="precio">$25,622.40 MXN</p>
 
                     <ul class="iconos-caracteristicas">
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
+                            <p>4</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
@@ -89,45 +110,46 @@
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>4</p>
+                            <p>8</p>
                         </li>
                     </ul>
 
                     <a href="anuncio.html" class="boton-amarillo-block">
-                        Ver Propiedad
+                        Ver habitación
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
             <div class="anuncio">
                 <picture>
-                    <source srcset="build/img/anuncio3.webp" type="image/webp">
+                    <source srcset="build/img/river.webp" type="image/webp">
                     <source srcset="build/img/anuncio3.jpg" type="image/jpeg">
                     <img loading="lazy" src="build/img/anuncio3.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Casa con alberca</h3>
-                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
-                    <p class="precio">$3,0000,000</p>
+                    <h3>SUITE OCEAN FAMILY</h3>
+                    <p>Es la opción de hospedaje perfecta para disfrutar en familia de 
+                        los impresionantes colores del mar Caribe y de nuestras icónicas caletas.</p>
+                    <p class="precio">$26,438.40 MXN</p>
 
                     <ul class="iconos-caracteristicas">
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
+                            <p>5</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
+                            <p>5</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>4</p>
+                            <p>10</p>
                         </li>
                     </ul>
 
                     <a href="anuncio.html" class="boton-amarillo-block">
-                        Ver Propiedad
+                        Ver habitación
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -145,64 +167,7 @@
         <a href="contacto.html" class="boton-amarillo">Contactános</a>
     </section>
 
-    <div class="contenedor seccion seccion-inferior">
-        <section class="blog">
-            <h3>Nuestro Blog</h3>
-
-            <article class="entrada-blog">
-                <div class="imagen">
-                    <picture>
-                        <source srcset="build/img/blog1.webp" type="image/webp">
-                        <source srcset="build/img/blog1.jpg" type="image/jpeg">
-                        <img loading="lazy" src="build/img/blog1.jpg" alt="Texto Entrada Blog">
-                    </picture>
-                </div>
-
-                <div class="texto-entrada">
-                    <a href="entrada.html">
-                        <h4>Terraza en el techo de tu casa</h4>
-                        <p class="informacion-meta">Escrito el: <span>20/10/2021</span> por: <span>Admin</span> </p>
-
-                        <p>
-                            Consejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero
-                        </p>
-                    </a>
-                </div>
-            </article>
-
-            <article class="entrada-blog">
-                <div class="imagen">
-                    <picture>
-                        <source srcset="build/img/blog2.webp" type="image/webp">
-                        <source srcset="build/img/blog2.jpg" type="image/jpeg">
-                        <img loading="lazy" src="build/img/blog2.jpg" alt="Texto Entrada Blog">
-                    </picture>
-                </div>
-
-                <div class="texto-entrada">
-                    <a href="entrada.html">
-                        <h4>Guía para la decoración de tu hogar</h4>
-                        <p class="informacion-meta">Escrito el: <span>20/10/2021</span> por: <span>Admin</span> </p>
-
-                        <p>
-                            Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio
-                        </p>
-                    </a>
-                </div>
-            </article>
-        </section>
-
-        <section class="testimoniales">
-            <h3>Testimoniales</h3>
-
-            <div class="testimonial">
-                <blockquote>
-                    El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas.
-                </blockquote>
-                <p>- Juan De la torre</p>
-            </div>
-        </section>
-    </div>
+   
 
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
