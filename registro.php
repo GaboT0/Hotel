@@ -45,7 +45,7 @@
 
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Apellido">
+                <input type="text" placeholder="Apellido Paterno">
              </div>
             
              <div class="input-contenedor">
@@ -76,6 +76,31 @@
         </form>
 
 <!---ENDFormulario-->
+
+    <div class = "col-md-8 col-md-offset-2">
+        <table class = "table table-bordered table-resposive">
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>ID</td>
+                <td>ID</td>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
