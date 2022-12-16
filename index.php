@@ -13,16 +13,13 @@
            
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
-<<<<<<< HEAD
                 <h3>Precio</h3>
                 <p></p>
-=======
                 <h3>Habitacioón</h3>
                 <p> 
                 Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
                 que proporcionaremos un lugar limpio y cómodo para alojarse.​
                 </p>
->>>>>>> 05ca9f190848bc9b243a98992459839f04e2a7ad
             </div>
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
