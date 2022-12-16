@@ -1,14 +1,9 @@
 
     <?php
     include './includes/templates/header.php';
-
-       include_once("conexion.php");
-       //$varc = new Cconexion();
-       //$varc ->ConexionBD();
-       //$varc ->InsertBD();
-       //$varc->DeleteBD();
-       //$varc->UpdateBD();
-       //$varc->SelectBD();
+    require './conexion.php';
+   
+       
     ?>
 
     <main class="contenedor seccion">
@@ -19,7 +14,7 @@
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p></p>
             </div>
             <div class="icono">
                 <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">

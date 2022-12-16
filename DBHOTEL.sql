@@ -53,7 +53,7 @@ idEmpl int FOREIGN KEY REFERENCES Empleados(idEmpl) not null
 );
 
 CREATE TABLE Contacto(
-idCont int primary key not null,
+idCont int identity(1,1) primary key not null,
 Nombre varchar(50) not null,
 Correo varchar(100) not null,
 Telefono varchar(12) not null,
