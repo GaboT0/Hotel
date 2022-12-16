@@ -24,7 +24,7 @@
                     <nav class="navegacion">
                         <a href="nosotros.html">Nosotros</a>
                         <a href="anuncios.html">Habitaciones</a>
-                        <a href="registro.html">Registrarse</a>
+                        <a href="registro.php">Registrarse</a>
                         <a href="contacto.html">Contacto</a>
                     </nav>
                 </div>
@@ -32,7 +32,7 @@
         </div>
     </header>
 
-<!---registro-->
+<!---Login-->
     <form class="formulario">
         
         <h1>Login</h1>
@@ -51,7 +51,7 @@
             </div>
             <input type="submit" value="Login" class="button">
             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-            <p>¿No tienes una cuenta? <a class="link" href="registro.html">Registrate </a></p>
+            <p>¿No tienes una cuenta? <a class="link" href="registro.php">Registrate </a></p>
         </div>
         </form>
 <!---ENDFormulario-->
