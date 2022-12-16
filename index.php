@@ -3,8 +3,8 @@
     include './includes/templates/header.php';
 
        include_once("conexion.php");
-       $varc = new Cconexion();
-       $varc ->ConexionBD();
+       //$varc = new Cconexion();
+       //$varc ->ConexionBD();
        //$varc ->InsertBD();
        //$varc->DeleteBD();
        //$varc->UpdateBD();

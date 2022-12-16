@@ -112,10 +112,10 @@ class Cconexion{
             die( print_r( sqlsrv_errors(), true));
         }
 
-        print "<h2>Query Example 1 | Fetching by Associate Array</h2>";
-        $sql = "SELECT * FROM prueba";
-        
-        $result = sqlsrv_query($conn, $sql);
+        print "<h3>Query Example SELECT | EXEC </h3>";
+        $sql = "EXEC VerCont ?;";
+        $params = array(1);
+        $result = sqlsrv_query($conn, $sql, $params);
         if($result === false) {
             die(print_r(sqlsrv_errors(), true));
         }
