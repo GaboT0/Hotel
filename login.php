@@ -11,7 +11,7 @@
     <header class="header inicio">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo" href="index.php">
                     <h1 class="logo__nombre">Hotel <span class="logo__bold">5 Estrellas</span></h1>
                 </a>
 
@@ -22,10 +22,10 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="build/img/dark-mode.svg">
                     <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Habitaciones</a>
+                        <a href="nosotros.php">Nosotros</a>
+                        <a href="anuncios.php">Habitaciones</a>
                         <a href="registro.php">Registrarse</a>
-                        <a href="contacto.html">Contacto</a>
+                        <a href="contacto.php">Contacto</a>
                     </nav>
                 </div>
             </div> <!--.barra-->
