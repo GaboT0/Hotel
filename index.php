@@ -18,7 +18,7 @@
                 <h3>Habitacioón</h3>
                 <p> 
                 Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
-                que proporcionaremos un lugar limpio y cómodo para alojarse.​
+                que proporcionaremos un lugar limpio y cómodo para alojarse.
                 </p>
             </div>
             <div class="icono">
@@ -62,22 +62,22 @@
 
                     <ul class="iconos-caracteristicas">
                         <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>8</p>
-                        </li>
-                        <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="7" r="4" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                        </svg>
                             <p>4</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>12</p>
+                            <p>2</p>
                         </li>
                     </ul>
-
+                    <!--
                     <a href="anuncio.html" class="boton-amarillo-block">
                         Ver habitación
-                    </a>
+                    </a>-->
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
@@ -97,23 +97,24 @@
                     <p class="precio">$25,622.40 MXN</p>
 
                     <ul class="iconos-caracteristicas">
+                        
                         <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="7" r="4" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                            </svg>
                             <p>4</p>
                         </li>
                         <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
-                        </li>
-                        <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>8</p>
+                            <p>2</p>
                         </li>
                     </ul>
-
+                    <!--
                     <a href="anuncio.html" class="boton-amarillo-block">
                         Ver habitación
-                    </a>
+                    </a>-->
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
@@ -131,23 +132,24 @@
                     <p class="precio">$26,438.40 MXN</p>
 
                     <ul class="iconos-caracteristicas">
+                        
                         <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>5</p>
-                        </li>
-                        <li>
-                            <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>5</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="7" r="4" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                            </svg>
+                            <p>3</p>
                         </li>
                         <li>
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
-                            <p>10</p>
+                            <p>1</p>
                         </li>
                     </ul>
-
+                    <!--
                     <a href="anuncio.html" class="boton-amarillo-block">
                         Ver habitación
-                    </a>
+                    </a>-->
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
@@ -161,23 +163,14 @@
     <section class="imagen-contacto">
         <h2>Tomate un descanso con nosotros</h2>
         <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
-        <a href="contacto.html" class="boton-amarillo">Contactános</a>
+        <a href="contacto.php" class="boton-amarillo">Contactános</a>
     </section>
 
    
 
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-
-        <p class="copyright">Todos los derechos Reservados 2021 &copy;</p>
-    </footer>
+    <?php
+      include './includes/templates/footer.php';
+    ?>
 
     <script src="build/js/bundle.min.js"></script>
 </body>
