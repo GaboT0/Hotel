@@ -18,7 +18,6 @@ function ConexionBD(){//Funcion de prueba
     }else{
         echo "Conexión no se pudo establecer.<br />";
         die( print_r( sqlsrv_errors(), true));
-
     }
     return $conn;
    

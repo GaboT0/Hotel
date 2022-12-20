@@ -43,68 +43,66 @@
         <form class="formulario" method="POST" action="./registro.php">
             <fieldset>
                 <h1>Registrate</h1>
-                
-                
-                    <div class="input-contenedor">
+                <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="nombre" placeholder="Nombre(s)">
+                </div>
+
+                <div class="input-contenedor">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" name="nombre" placeholder="Nombre(s)">
-                    </div>
+                    <input type="text" name="app" placeholder="Apellido Paterno">
+                </div>
 
-                    <div class="input-contenedor">
-                        <i class="fas fa-user icon"></i>
-                        <input type="text" name="app" placeholder="Apellido Paterno">
-                    </div>
+                <div class="input-contenedor">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" name="apm" placeholder="Apellido Materno">
+                </div>
+            
+                <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="text" name="dir" placeholder="Domicilio">
+                </div>
 
-                    <div class="input-contenedor">
-                        <i class="fas fa-user icon"></i>
-                        <input type="text" name="apm" placeholder="Apellido Materno">
-                    </div>
+                <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" name="email" placeholder="Email">
+                </div>
+
+                <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="tel" name="telefono" placeholder="Celular">
+                </div>
                 
-                    <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <input type="text" name="dir" placeholder="Domicilio">
-                    </div>
-
-                    <div class="input-contenedor">
-                    <i class="fas fa-envelope icon"></i>
-                    <input type="text" name="email" placeholder="Email">
-                    </div>
-
-                    <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <input type="tel" name="telefono" placeholder="Celular">
-                    </div>
-                    
-                    <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <input type="password" name="pass" placeholder="Contraseña">
-                    </div>
+                <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="pass" placeholder="Contraseña">
+                </div>
 
 
-                    <input type="submit" value="Registrate" class="button">
-                    <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-                    <p>¿Ya tienes una cuenta? <a class="link" href="login.php">Iniciar Sesion</a></p>
-                
-                <fieldset>
-            </form>
-        </main>
+                <input type="submit" value="Registrate" class="button">
+                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                <p>¿Ya tienes una cuenta? <a class="link" href="login.php">Iniciar Sesion</a></p>
+            
+            <fieldset>
+        </form>
+    </main>
 <!---ENDFormulario-->
 
-    <div class = "col-md-8 col-md-offset-2">
+    <!-- <div class = "col-md-8 col-md-offset-2">
         <table class = "table table-bordered table-resposive">
             <tr>
                 <td>ID</td>
                 <td>Nombre</td>
                 <td>ID</td>
-                <td>ID</td>
+                <td>ID</td> -->
 
                 
 
 
 
 
-                <?php
-      include './includes/templates/footer.php';
+    <?php
+        include './includes/templates/footer.php';
     ?>
 
     <script src="build/js/bundle.min.js"></script>

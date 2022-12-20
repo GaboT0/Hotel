@@ -31,6 +31,7 @@ a {
     background-color: transparent
 }
 
+
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -396,13 +397,13 @@ h4 {
 }
 
 .footer {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
     background-color: #333;
     margin-bottom: 0
 }
 
 .footer .contenedor-footer {
-    padding-top: 2.5rem
+    padding-top: 1.5rem
 }
 
 .footer .navegacion {
@@ -758,6 +759,8 @@ h4 {
     padding-left: 1rem 0 3rem 0
 }
 
+
+
 /*# sourceMappingURL=app.css.map */
 
 
@@ -767,8 +770,8 @@ h4 {
     padding: 15px;
 }
 .formulario{
-    background: #fff;
-    margin-top: 150px;
+    /* background: #fff; */
+    margin-top: 50px;
     padding: 3px;
 
 }
@@ -781,7 +784,7 @@ input[type="password"]{
 }
 .input-contenedor{
     margin-bottom: 15px;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
 }
 .icon{
     min-width: 50px;
@@ -817,7 +820,7 @@ p{
     .formulario{
         margin: auto;
         width: 500px;
-        margin-top: 150px;
+        margin-top: 50px;
         border-radius: 2%;
     }
 }
