@@ -1,6 +1,6 @@
 <?php
 //CONEXION A LA BASE DE DATOS
-function ConexionBD(){
+function ConexionBD(){//Funcion de prueba
 
     $host="localhost";
     $dbname="Hotel";
@@ -14,31 +14,21 @@ function ConexionBD(){
 
     if( $conn ) {
         echo "Conexión establecida.<br />";
+
     }else{
         echo "Conexión no se pudo establecer.<br />";
         die( print_r( sqlsrv_errors(), true));
 
     }
-    
+    return $conn;
    
 }
 
 //SECCION DE INSERTS
 
-function InsertBD(){
+function InsertBD(){//Funcion de prueba
         
-    $host="localhost";
-    $dbname="Hotel";
-    $username="prueba";
-    $pasword ="p1234";
-    $puerto=1433;
-
-    $serverName = "localhost\sqlexpress,$puerto"; 
-    $connectionInfo = array( "Database"=>$dbname, "UID"=>$username, "PWD"=>$pasword);
-    $conn = sqlsrv_connect( $serverName, $connectionInfo);
-    if( $conn === false ) {
-        die( print_r( sqlsrv_errors(), true));
-    }
+    $conn =ConexionBD();
 
     $sql = "INSERT INTO prueba VALUES (?,?);";
     $params = array(7,'Crash3');
@@ -51,18 +41,7 @@ function InsertBD(){
 
 function InsertContact($nombre,$email,$telefono,$mensaje,$cli,$fecha){
         
-    $host="localhost";
-    $dbname="Hotel";
-    $username="prueba";
-    $pasword ="p1234";
-    $puerto=1433;
-
-    $serverName = "localhost\sqlexpress,$puerto"; 
-    $connectionInfo = array( "Database"=>$dbname, "UID"=>$username, "PWD"=>$pasword);
-    $conn = sqlsrv_connect( $serverName, $connectionInfo);
-    if( $conn === false ) {
-        die( print_r( sqlsrv_errors(), true));
-    }
+    $conn = ConexionBD();
 
     if($cli === "SI"){
         $bcli=1;
@@ -79,23 +58,32 @@ function InsertContact($nombre,$email,$telefono,$mensaje,$cli,$fecha){
     }
 }
 
+function InsertNewReg($nombre,$app,$apm,$dir,$email,$telefono,$pass){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC CreateHuesped ?,?,?,?,?,?,?";
+    $params = array($nombre,$app,$apm,$dir,$email,$telefono,$pass);
+    //'Jeromy','Nelthorp','Mum','International','mum0@yhoco.jp','6087384170','XGWJ9t'
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
+
+    sqlsrv_free_stmt( $stmt);
+
+}
+
 
 //SECCION DE DELETES
 
-function DeleteBD(){
+function DeleteBD(){//Funcion de prueba
     
-    $host="localhost";
-    $dbname="Hotel";
-    $username="prueba";
-    $pasword ="p1234";
-    $puerto=1433;
-
-    $serverName = "localhost\sqlexpress,$puerto"; 
-    $connectionInfo = array( "Database"=>$dbname, "UID"=>$username, "PWD"=>$pasword);
-    $conn = sqlsrv_connect( $serverName, $connectionInfo);
-    if( $conn === false ) {
-        die( print_r( sqlsrv_errors(), true));
-    }
+    $conn= ConexionBD();
 
     $sql = "DELETE FROM prueba WHERE id=?;";
     $params = array(1);
@@ -108,20 +96,9 @@ function DeleteBD(){
 
 
 //SECCION DE UPDATES
-function UpdateBD(){
+function UpdateBD(){//Funcion de prueba
     
-    $host="localhost";
-    $dbname="Hotel";
-    $username="prueba";
-    $pasword ="p1234";
-    $puerto=1433;
-
-    $serverName = "localhost\sqlexpress,$puerto"; 
-    $connectionInfo = array( "Database"=>$dbname, "UID"=>$username, "PWD"=>$pasword);
-    $conn = sqlsrv_connect( $serverName, $connectionInfo);
-    if( $conn === false ) {
-        die( print_r( sqlsrv_errors(), true));
-    }
+    $conn= ConexionBD();
 
     $sql = "UPDATE prueba SET nombre = ? WHERE id = ?;";
     $params = array('Crash2',7);
@@ -135,7 +112,7 @@ function UpdateBD(){
 
 //SECCION DE SELECTS
 
-function SelectBD(){
+function SelectBD(){//Funcion de prueba
     
     $host="localhost";
     $dbname="Hotel";
@@ -168,6 +145,27 @@ function SelectBD(){
 
 }
 
+function validarPass($usuario,$contraseña){
+    $conn=ConexionBD();
 
+    echo $usuario."<br/>";
+    echo $contraseña."<br/>";
+
+    $sql = "EXEC validarP ?,?";
+    $params = array($usuario,$contraseña);
+    //'jmum0@yahoo.co.jp','XGWJ9t'
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['num']." valor<br />";
+        return $row['num'];
+    }
+
+    sqlsrv_free_stmt( $stmt);
+    
+}
 
 ?>
