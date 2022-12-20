@@ -1,80 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel 5 estrellas</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    
-    <header class="header inicio">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre">Hotel <span class="logo__bold">5 Estrellas</span></h1>
-                </a>
 
-                <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="icono menu responsive">
-                </div>
+    <?php
+    include './includes/templates/header.php';
+    require './conexion.php';
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $nombre = $_POST['nombre'];
+        $app = $_POST['app'];
+        $apm = $_POST['apm'];
+        $dir= $_POST['dir'];
+        $email= $_POST['email'];
+        $telefono= $_POST['telefono'];
+        $pass= $_POST['pass'];
+        
+        $exist = InsertNewReg($nombre,$app,$apm,$dir,$email,$telefono,$pass);
 
-                <div class="derecha">
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg">
-                    <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Habitaciones</a>
-                        <a href="login.php">Iniciar Sesion</a>
-                        <a href="contacto.html">Contacto</a>
-                    </nav>
-                </div>
-            </div> <!--.barra-->
-        </div>
-    </header>
-
-<!---Registro-->
-    <form class="formulario">
-    
-        <h1>Registrate</h1>
-         <div class="contenedor">
-         
-            <div class="input-contenedor">
-            <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Nombre(s)">
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Apellido Paterno">
-             </div>
+        if($exist == "1"){
+            print '<script language="JavaScript">';
+            print 'alert("Este correo electronico ya esta registrado");';
+            print "window.location= 'registro.php'";
+            print '</script>';
+            ?>
             
-             <div class="input-contenedor">
-             <i class="fas fa-envelope icon"></i>
-             <input type="text" placeholder="Email">
-             </div>
+          <!-- <h1 > AUTENTIFICACION</h1> -->
+          <?php
+            print $exist;
+        }else{
+              print '<script language="JavaScript">';
+              print 'alert("Registrado con exito");';
+              print "window.location= 'login.php'";
+              print '</script>';
+              //header("location:login.php");
+            ?>
+            
+          <!-- <h1 >ERROR DE AUTENTIFICACION</h1> -->
+          <?php
+          echo $exist;
+        }
+    }
+       
+    ?>
+    <main class="contenedor seccion">
+<!---Registro-->
+        <form class="formulario" method="POST" action="./registro.php">
+            <fieldset>
+                <h1>Registrate</h1>
+                
+                
+                    <div class="input-contenedor">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" name="nombre" placeholder="Nombre(s)">
+                    </div>
 
-             <div class="input-contenedor">
-             <i class="fas fa-key icon"></i>
-             <input type="text" placeholder="Domicilio">
-             </div>
+                    <div class="input-contenedor">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" name="app" placeholder="Apellido Paterno">
+                    </div>
 
-             <div class="input-contenedor">
-             <i class="fas fa-key icon"></i>
-             <input type="tel" placeholder="Celular">
-             </div>
-             
-             <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-             <input type="password" placeholder="Contraseña">
-             </div>
+                    <div class="input-contenedor">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" name="apm" placeholder="Apellido Materno">
+                    </div>
+                
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="text" name="dir" placeholder="Domicilio">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="text" name="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="tel" name="telefono" placeholder="Celular">
+                    </div>
+                    
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" name="pass" placeholder="Contraseña">
+                    </div>
 
 
-             <input type="submit" value="Registrate" class="button">
-             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-             <p>¿Ya tienes una cuenta?<a class="link" href="login.php">Iniciar Sesion</a></p>
-         </div>
-        </form>
-
+                    <input type="submit" value="Registrate" class="button">
+                    <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                    <p>¿Ya tienes una cuenta? <a class="link" href="login.php">Iniciar Sesion</a></p>
+                
+                <fieldset>
+            </form>
+        </main>
 <!---ENDFormulario-->
 
     <div class = "col-md-8 col-md-offset-2">
@@ -86,18 +99,6 @@
                 <td>ID</td>
 
                 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

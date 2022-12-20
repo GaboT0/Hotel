@@ -12,6 +12,7 @@
             $mensaje= $_POST['mensaje'];
             $cli= $_POST['opciones'];
             $fecha= $_POST['fecha'];
+            
             InsertContact($nombre,$email,$telefono,$mensaje,$cli,$fecha);
         }
         
@@ -27,9 +28,7 @@
         </picture>
 
         <h2>Llene el formulario de Contacto</h2>
-        <?php
-        //    ConexionBD();
-        ?>
+        
         <form class="formulario" method="POST" action="./contacto.php">
             <fieldset>
                 <legend>Información Personal</legend>
@@ -49,20 +48,21 @@
 
             <fieldset>
                 <legend>¿Ha sido cliente de nuestro hotel?</legend>
+                
+                    <label for="opciones">Es Cliente:</label>
+                    <select name="opciones" id="opciones">
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option  value="SI">Si</option>
+                        <option value="No">No</option>
+                    </select>
 
-                <label for="opciones">Es Cliente:</label>
-                <select name="opciones" id="opciones">
-                    <option value="" disabled selected>-- Seleccione --</option>
-                    <option  value="SI">Si</option>
-                    <option value="No">No</option>
-                </select>
-
-                <label for="fecha">Fecha:</label>
-                <input name="fecha" type="date" id="fecha">
+                    <label for="fecha">Fecha:</label>
+                    <input name="fecha" type="date" id="fecha">
+                
             </fieldset>
 
         
-            <input type="submit" value="Enviar" class="boton-verde">
+            <input type="submit" value="Enviar" class="button">
         </form>
     </main>
 
