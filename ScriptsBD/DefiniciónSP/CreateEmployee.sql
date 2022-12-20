@@ -9,11 +9,11 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 create procedure [dbo].[CreateEmployee] 
- @idEmpl int,
+
  @Nombre nvarchar(50),
  @ApP nvarchar(50),
  @ApM nvarchar(50),
  @tipoEmp int
 as
-insert into Empleados (idEmpl,Nombre,ApP,ApM,TipoEm) values(@idEmpl,@nombre,@ApP,@ApP,@tipoEmp)
+insert into Empleados (Nombre,ApP,ApM,TipoEm) values(@nombre,@ApP,@ApP,@tipoEmp)
 GO
