@@ -13,7 +13,11 @@ idEmpl int identity(1,1) Primary key not null,
 Nombre varchar(50) not null,
 ApP varchar(100) not null,
 ApM varchar(100) not null,
+Dir varchar(100) not null,
+Correo varchar(100) not null,
+Telefono varchar(12) not null,
 TipoEm int not null,
+Contrasena varchar(15) not null
 FOREIGN KEY (TipoEm) REFERENCES TipoEmpleado(idTEmpl)
 );
 
@@ -41,8 +45,16 @@ ApM varchar(50) not null,
 Dir varchar(100) not null,
 Correo varchar(100) not null,
 Telefono varchar(12) not null,
-Contrasena varchar(15) not null--Añadido
+Contrasena varchar(15) not null
 );
+
+CREATE TABLE TipoServicio(
+idServ int identity(1,1) primary key not null,
+TipoServ varchar(100) not null,
+Precio money not null,
+Descrip varchar(300) not null
+);
+
 
 CREATE TABLE Reservaciones(
 idResv int identity(1,1) primary key not null,
@@ -50,7 +62,14 @@ idHues int FOREIGN KEY REFERENCES Huesped(idHues) not null,
 idHab int FOREIGN KEY REFERENCES Habitaciones(idHab) not null,
 idEmpl int FOREIGN KEY REFERENCES Empleados(idEmpl) not null,
 beg_dte date not null,
-end_dte date not null
+end_dte date not null,
+CostoF money not null
+);
+
+CREATE TABLE Serv_Resv(
+idSR int identity(1,1) primary key not null,
+idTServ int FOREIGN KEY REFERENCES TipoServicio(idServ) not null,
+idResv int FOREIGN KEY REFERENCES Reservaciones(idResv) not null,
 );
 
 CREATE TABLE Contacto(
@@ -62,4 +81,3 @@ Mensaje varchar(300) not null,
 EsCliente bit not null,
 FechaResv date
 );
-
