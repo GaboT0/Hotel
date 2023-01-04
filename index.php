@@ -2,8 +2,6 @@
     <?php
     include './includes/templates/header.php';
     require './conexion.php';
-   
-       
     ?>
 
     <main class="contenedor seccion">
@@ -15,7 +13,7 @@
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
                 <p></p>
-                <h3>Habitacioón</h3>
+                <h3>Habitación</h3>
                 <p> 
                 Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
                 que proporcionaremos un lugar limpio y cómodo para alojarse.

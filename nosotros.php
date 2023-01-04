@@ -30,20 +30,35 @@
         <h1>Más Sobre Nosotros</h1>
 
         <div class="iconos-nosotros">
-            <div class="icono">
-                <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
-                <h3>Seguridad</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
-            </div>
+           
             <div class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <p></p>
+                <h3>Habitación</h3>
+                <p> 
+                Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
+                que proporcionaremos un lugar limpio y cómodo para alojarse.
+                </p>
+            </div>
+            <div class="icono">
+                <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
+                <h3>Su salud</h3>
+                <p>
+                Con la Promesa de limpieza Hotel 5 estrellas®, 
+                los huéspedes pueden estar seguros que lo bueno no es suficiente ya que estamos 
+                comprometidos con elevados niveles de limpieza. Eso significa habitaciones limpias, 
+                bien mantenidas y ordenadas que cumplen con nuestros estándares. Si esto no es lo que 
+                encuentras tras tu registro de entrada, prometemos corregirlo.
+                </p>
             </div>
             <div class="icono">
                 <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
-                <h3>A Tiempo</h3>
-                <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
+                <h3>Recepción</h3>
+                <p>
+                Una experiencia eficiente en el registro de entrada y 
+                el registro de salida le permite seguir su camino con facilidad y rapidez.
+                </p>
             </div>
         </div>
     </section>
