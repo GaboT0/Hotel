@@ -23,7 +23,7 @@
                     <img class="dark-mode-boton" src="build/img/dark-mode.svg">
                     <nav class="navegacion">
                         <a href="nosotros.php">Nosotros</a>
-                        <a href="anuncios.php">Habitaciones</a>
+                        <a href="habitaciones.php">Habitaciones</a>
                         <a href="login.php">Iniciar Sesion</a>
                         <a href="contacto.php">Contacto</a>
                     </nav>
