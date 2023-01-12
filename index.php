@@ -5,40 +5,23 @@
     ?>
 
     <main class="contenedor seccion">
-        <h1>Más Sobre Nosotros</h1>
-
-        <div class="iconos-nosotros">
-           
-            <div class="icono">
-                <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
-                <h3>Precio</h3>
-                <p></p>
-                <h3>Habitación</h3>
-                <p> 
-                Nuestras habitaciones cumplen con la Promesa de limpieza IHG, lo que garantiza 
-                que proporcionaremos un lugar limpio y cómodo para alojarse.
-                </p>
+        
+        <section class="book">
+            <div class container flex_space>
+                <div class="text">
+                    <h1> Reserva Ahora</h1>
+                </div>
+                <div class="form">
+                    <form class="grid">
+                        <input type="date" placeholder="Araival Date">
+                        <input type="date" placeholder="Departure Date">
+                        <input type="number" placeholder="Personas">
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
             </div>
-            <div class="icono">
-                <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
-                <h3>Su salud</h3>
-                <p>
-                Con la Promesa de limpieza Hotel 5 estrellas®, 
-                los huéspedes pueden estar seguros que lo bueno no es suficiente ya que estamos 
-                comprometidos con elevados niveles de limpieza. Eso significa habitaciones limpias, 
-                bien mantenidas y ordenadas que cumplen con nuestros estándares. Si esto no es lo que 
-                encuentras tras tu registro de entrada, prometemos corregirlo.
-                </p>
-            </div>
-            <div class="icono">
-                <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
-                <h3>Recepción</h3>
-                <p>
-                Una experiencia eficiente en el registro de entrada y 
-                el registro de salida le permite seguir su camino con facilidad y rapidez.
-                </p>
-            </div>
-        </div>
+        </section>
+        
     </main>
 
     <section class="seccion contenedor">
