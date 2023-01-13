@@ -10,11 +10,13 @@
     
     <header class="header inicio">
         <div class="contenedor contenido-header">
+        
             <div class="barra">
+            
                 <a class="logo" href="index.php">
                     <h1 class="logo__nombre">Hotel <span class="logo__bold">5 Estrellas</span></h1>
                 </a>
-
+                    
                 <div class="mobile-menu">
                     <img src="build/img/barras.svg" alt="icono menu responsive">
                 </div>
@@ -26,8 +28,27 @@
                         <a href="habitaciones.php">Habitaciones</a>
                         <a href="login.php">Iniciar Sesion</a>
                         <a href="contacto.php">Contacto</a>
+                        <!-- MENU LATERAL -->
+                        <div class="btn-menu"> 
+                        <label for="btn-menu">&nbsp;☰&nbsp;</label>
+                        </div>
+                        <!-- MENU LATERAL -->
                     </nav>
+                    
                 </div>
             </div> <!--.barra-->
         </div>
     </header>
+<!-- MENU LATERAL -->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="#">Modificar perfil</a>
+			<a href="#">Habitaciones reservadas</a>
+			<a href="#">Cancelar reservacion</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+<!-- MENU LATERAL -->
