@@ -11,7 +11,7 @@ $contraseña=$_POST['password'];
 $exist = validarPass($usuario,$contraseña);
 
 if($exist == "1"){
-    header("location:index.php");
+    header("location:clientemenu.php");
     ?>
     
   <!-- <h1 > AUTENTIFICACION</h1> -->
