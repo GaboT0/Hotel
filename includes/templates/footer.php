@@ -4,7 +4,8 @@
                 <a href="nosotros.php">Nosotros</a>
                 <a href="habitaciones.php">Habitaciones</a>
                 <a href="contacto.php">Contacto</a>
-                <a href="adminmenu.php">&nbsp;Admin</a>
+                <a href="logad.php">&nbsp;Admin</a>
+                <!-- <a href="clientemenu.php">&nbsp;Cliente</a> -->
             </nav>
            
         </div>

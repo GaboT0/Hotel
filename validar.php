@@ -11,9 +11,7 @@ $contraseña=$_POST['password'];
 $exist = validarPass($usuario,$contraseña);
 
 if($exist == "1"){
-  
-  
-    header("location:huespedmenu.php");
+    header("location:clientemenu.php");
     ?>
     
   <!-- <h1 > AUTENTIFICACION</h1> -->
@@ -24,7 +22,7 @@ if($exist == "1"){
       print 'alert("Usuario o contraseña equivocada");';
       print "window.location= 'login.php'";
       print '</script>';
-      //header("location:login.php");
+      header("location:login.php");
     ?>
     
   <!-- <h1 >ERROR DE AUTENTIFICACION</h1> -->
