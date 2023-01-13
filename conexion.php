@@ -1,5 +1,6 @@
 <?php
 //CONEXION A LA BASE DE DATOS
+
 function ConexionBD(){//Funcion de prueba
 
     $host="localhost";
@@ -8,7 +9,7 @@ function ConexionBD(){//Funcion de prueba
     $pasword ="p1234";
     $puerto=1433;
 
-    $serverName = "localhost\sqlexpress,$puerto"; 
+    $serverName = "localhost\SQLEXPRESS\sqlexpress,$puerto"; 
     $connectionInfo = array( "Database"=>$dbname, "UID"=>$username, "PWD"=>$pasword);
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
@@ -16,12 +17,15 @@ function ConexionBD(){//Funcion de prueba
         echo "Conexión establecida.<br />";
 
     }else{
-        echo "Conexión no se pudo establecer.<br />";
+        echo "Conexión no se pudo establecer CONEXION.<br />";
         die( print_r( sqlsrv_errors(), true));
     }
     return $conn;
    
 }
+
+ //$c=ConexionBD();
+
 
 //SECCION DE INSERTS
 
@@ -161,6 +165,29 @@ function validarPass($usuario,$contraseña){
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
         echo $row['num']." valor<br />";
         return $row['num'];
+    }
+
+    sqlsrv_free_stmt( $stmt);
+    
+}
+
+function validaradPass($usuario,$contraseña){
+    $conn=ConexionBD();
+
+    echo $usuario."<br/>";
+    echo $contraseña."<br/>";
+
+    $sql = "EXEC validarADP ?,?";
+    $params = array($usuario,$contraseña);
+    //'dfossickd@n.org' , '35448'
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['Tipo']." valor<br />";
+        return $row['Tipo'];
     }
 
     sqlsrv_free_stmt( $stmt);
