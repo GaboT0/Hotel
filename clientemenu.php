@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-<h1>Bienvenido Administrador</h1>
+<h1>Bienvenido Cliente</h1>
     <main class="contenedor seccion">
     <!---Menu-->
     <div class="contenedor-anunciosad">
