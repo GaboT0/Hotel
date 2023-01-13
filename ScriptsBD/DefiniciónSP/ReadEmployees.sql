@@ -1,7 +1,7 @@
 create Procedure ReadEmployees
-@idEmpl int = null
+@correo int = null
 as
-if @idEmpl is null
+if @correo is null
 begin
 select * from empleados
 end
@@ -9,5 +9,5 @@ else
 begin
 	select * from 
 	empleados 
-	where idEmpl=@idEmpl
+	where Correo=@correo
 end;

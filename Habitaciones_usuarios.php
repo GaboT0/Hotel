@@ -212,7 +212,12 @@
                     </a>-->
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+           
         </div> <!--.contenedor-anuncios-->
+        <div class="alinear-derecha">
+            <a href="huespedmenu.php" class="boton-verde">Regresar</a>
+            </div>
     </main>
 
     <?php
