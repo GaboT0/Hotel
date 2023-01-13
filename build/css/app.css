@@ -830,6 +830,25 @@ p{
     }
 }
 
+/*** Commit Index ***/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+input{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+
+.book input {
+    padding: 20px;
+}
+
 
 
 	/*Menù lateral*/
