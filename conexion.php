@@ -5,8 +5,8 @@ function ConexionBD(){//Funcion de prueba
 
     $host="localhost";
     $dbname="Hotel";
-    $username="sa";
-    $pasword ="root";
+    $username="prueba";
+    $pasword ="p1234";
     $puerto=1433;
 
     $serverName = "localhost\SQLEXPRESS\sqlexpress,$puerto"; 
@@ -154,6 +154,25 @@ function DeleteBD(){//Funcion de prueba
     $stmt = sqlsrv_query( $conn, $sql, $params);
     if( $stmt === false ) {
         die( print_r( sqlsrv_errors(), true));
+    }
+}
+
+function E_recepcionista($email,$pass){
+    
+    $conn= ConexionBD();
+
+    $sql = "EXEC DeleteEmployee ?,?;";
+    $params = array($email,$pass);
+
+    $stmt = sqlsrv_query( $conn, $sql, $params);
+    
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['id']." valor<br />";
+        return $row['id'];
     }
 }
 
