@@ -1,0 +1,10 @@
+use Hotel
+go
+Create Function Calcular_precio(@beg_dte nvarchar(8),@end_dte nvarchar(8),@idHab int)
+returns money
+AS
+BEGIN
+	declare @price money;
+		select @price= (select DATEDIFF(day,CONVERT(datetime,@beg_dte),CONVERT(datetime,@end_dte))*TipoHabitacion.Precio from TipoHabitacion where idTHab=@idHab);
+	RETURN @price;
+END;
