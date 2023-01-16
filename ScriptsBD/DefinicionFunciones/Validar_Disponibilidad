@@ -1,0 +1,15 @@
+use Hotel
+go
+Create Function validar_fecha_reservacion(@beg_dte nvarchar(8),@end_dte nvarchar(8),@idHab int)
+returns int
+AS
+BEGIN
+	declare @flg int;
+	set @flg=(select 1 val from Reservaciones
+where idHab=@idHab 
+and( @beg_dte between  beg_dte
+and end_dte
+or @end_dte between beg_dte 
+and end_dte));
+return @flg;
+END;
