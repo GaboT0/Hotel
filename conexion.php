@@ -17,7 +17,7 @@ function ConexionBD(){//Funcion de prueba
         echo "<br />";
 
     }else{
-        echo "Conexión no se pudo establecer CONEXION.<br />";
+        echo "Conexión no se pudo establecer.<br />";
         die( print_r( sqlsrv_errors(), true));
     }
     return $conn;
@@ -25,7 +25,7 @@ function ConexionBD(){//Funcion de prueba
 }
 //ConexionBD();
 
- //$c=ConexionBD();
+//  $c=ConexionBD();
 
 
 //SECCION DE INSERTS
@@ -191,12 +191,12 @@ function UpdateBD(){//Funcion de prueba
     }
 }
 //Modifica Recepcionista
-
-function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp){
+//$idemp,  ?, $idemp,
+function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp){
     $conn= ConexionBD();
     
-    $sql = "EXEC UpdateEmployee ?,?,?,?,?,?,?,?";
-    $params = array($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp,);
+    $sql = "EXEC UpdateEmployee ?,?,?,?,?,?,?";
+    $params = array($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp);
     $stmt = sqlsrv_query( $conn, $sql,$params);
     if( $stmt === false) {
         die( print_r( sqlsrv_errors(), true) );
@@ -206,9 +206,6 @@ function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp
         echo $row['exist']." valor<br />";
         return $row['exist'];
     }
-
-    sqlsrv_free_stmt( $stmt);
-
 }
 
 //SECCION DE SELECTS

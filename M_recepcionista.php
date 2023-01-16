@@ -5,22 +5,12 @@
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
            
         $email= $_POST['email'];
-     
-        
-
         $exist = B_recepcionista($email);
-            
-    
             if($exist == "1"){
                 print '<script language="JavaScript">';
                 print 'alert("Usuario no encontrado");';
                 print "window.location= 'M_recepcionista.php'";
                 print '</script>';
-                ?>
-                
-              <!-- <h1 > AUTENTIFICACION</h1> -->
-              <?php
-                print $exist;
             }else{
                   print '<script language="JavaScript">';
                   print 'alert("Usuario encontrado");';
@@ -31,11 +21,7 @@
                 
               <!-- <h1 >ERROR DE AUTENTIFICACION</h1> -->
               <?php
-              echo $exist;
             }
-         
-          
-           
 
         }
 
@@ -48,10 +34,10 @@
       
             <p>
 
-Buscar recepcionista: 
+Buscar usuario Ingresa correo electronico: 
 <input type="search" name="email" size="200" maxlength="200">
 
-<input type="submit" value="Buscar">
+<input type="submit" class="boton-amarillo" value="Buscar">
 
 </p>
     </form>
@@ -61,20 +47,20 @@ Buscar recepcionista:
    
 
         <?php
-        $conn=ConexionBD();
-        $query="SELECT * FROM Empleados where correo='$email';";
-        $res=sqlsrv_query($conn,$query);
-        while ($row=sqlsrv_fetch_array($res)){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+          $conn=ConexionBD();
+          $query="SELECT * FROM Empleados where correo='$email';";
+          $res=sqlsrv_query($conn,$query);
+          while ($row=sqlsrv_fetch_array($res)){
+        
+        
         ?>
-
-      
 
         <form class="formulario" method="POST" action="./modifica_r.php">
                     <div class="input-contenedor">
                     <i class="fas fa-envelope icon"></i>
                     <p>ID Usuario</p>
-                    <input type="text" disabled name="idemp" value="<?=$row[0]?>" >
-                    
+                    <input type="text"  name="idempl" value="<?=$row[0]?>" >
                     </div>
       
                     <div class="input-contenedor">
@@ -102,11 +88,6 @@ Buscar recepcionista:
                     <p>Dirección</p>
                     <input type="text" name="dir" value="<?=$row[4]?>">
                     </div>
-                    <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <p>Correo electrónico</p>
-                    <input type="text" name="email" value="<?=$row[5]?>">
-                    </div>
 
                     <div class="input-contenedor">
                     <i class="fas fa-key icon"></i>
@@ -127,6 +108,7 @@ Buscar recepcionista:
 
         <?php
         }
+      }
         ?>
 
 

@@ -41,10 +41,10 @@
       
             <p>
 
-Buscar recepcionista: 
+            Buscar usuario Ingresa correo electronico:
 <input type="search" name="Correo" size="200" maxlength="200">
 
-<input type="submit" value="Buscar">
+<input type="submit" class="boton-amarillo" value="Buscar">
 
 </p>
     </form>

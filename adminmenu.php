@@ -24,7 +24,7 @@
                     <h3>Agregar usuario</h3>
                     
                     <a href="A_recepcionista.php" class="boton-amarillo-block">
-                        Agregar recepcionista
+                        Agregar Usuario
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -37,7 +37,7 @@
                     <h3>Eliminar usuario</h3>
                     
                     <a href="E_recepcionista.php" class="boton-amarillo-block">
-                        Eliminar recepcionista
+                        Eliminar Usuario
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -50,7 +50,7 @@
                     <h3>Modificar usuario</h3>
                     
                     <a href="M_recepcionista.php" class="boton-amarillo-block">
-                        Modificar recepcionista
+                        Modificar Usuario
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -63,7 +63,7 @@
                     <h3>Buscar usuario</h3>
                     
                     <a href="B_recepcionista.php" class="boton-amarillo-block">
-                        Buscar recepcionista
+                        Buscar Usuario
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
