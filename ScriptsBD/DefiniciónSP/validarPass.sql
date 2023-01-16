@@ -28,14 +28,16 @@ Create procedure validarADP
 @Contraseña varchar(15)
 AS BEGIN
 SET NOCOUNT ON
-    declare @exist int
-  SELECT @exist = COUNT(*) from Empleados where Correo = 'dfossickd@n.org' AND Contrasena = '35448'
-  if @exist =1
+  declare @exist int = 0
+  SELECT @exist = COUNT(*) from Empleados where Correo = @Correo AND Contrasena = @Contraseña
+  if @exist = 1
   begin 
-   declare @tipo int
-	SELECT top(1) @tipo=TipoEm from Empleados where Correo = 'dfossickd@n.org' AND Contrasena = '35448'
+	declare @tipo int = 0
+	SELECT top(1) @tipo=TipoEm from Empleados where Correo = @Correo AND Contrasena = @Contraseña
 	select @tipo as Tipo
   end
+  else
+  select @exist as Tipo
 END
-DROP PROCEDURE validarADP
+
 EXEC validarADP 'dfossickd@n.org' , '35448'

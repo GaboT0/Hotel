@@ -14,7 +14,7 @@ function ConexionBD(){//Funcion de prueba
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
     if( $conn ) {
-        echo "Conexión establecida.<br />";
+        echo "<br />";
 
     }else{
         echo "Conexión no se pudo establecer CONEXION.<br />";
@@ -23,6 +23,7 @@ function ConexionBD(){//Funcion de prueba
     return $conn;
    
 }
+//ConexionBD();
 
  //$c=ConexionBD();
 
@@ -33,7 +34,7 @@ function InsertBD(){//Funcion de prueba
         
     $conn =ConexionBD();
 
-    $sql = "INSERT INTO prueba VALUES (?,?);";
+    $sql = "INSERT INTO sa VALUES (?,?);";
     $params = array(7,'Crash3');
 
     $stmt = sqlsrv_query( $conn, $sql, $params);
@@ -56,9 +57,9 @@ function InsertContact($nombre,$email,$telefono,$mensaje,$cli,$fecha){
     $params = array($nombre,$email,$telefono,$mensaje,$bcli,$fecha);
 
     $stmt = sqlsrv_query( $conn, $sql, $params);
-    if( $stmt === false ) {
+    if( $stmt === false ) 
         die( print_r( sqlsrv_errors(), true));
-    }
+    
 }
 
 function InsertNewReg($nombre,$app,$apm,$dir,$email,$telefono,$pass){
@@ -80,6 +81,65 @@ function InsertNewReg($nombre,$app,$apm,$dir,$email,$telefono,$pass){
     sqlsrv_free_stmt( $stmt);
 
 }
+//Inserta nuevo recepcionista
+
+function A_recepcionista($nombre,$app,$apm,$dir,$email,$telefono,$tipoemp,$pass){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC CreateEmployee ?,?,?,?,?,?,?,?";
+    $params = array($nombre,$app,$apm,$dir,$email,$telefono,$tipoemp,$pass);
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
+
+    sqlsrv_free_stmt( $stmt);
+
+}
+
+//Consulta recepcionista
+function B_recepcionista($email){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC ReadEmployees ?";
+   // $params = array($email);
+    /*$stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
+
+    sqlsrv_free_stmt( $stmt);*/
+
+
+    $params = array(1);
+    $result = sqlsrv_query($conn, $sql, $params);
+    if($result === false) {
+        die(print_r(sqlsrv_errors(), true));
+    }
+    #Imprime los registros
+   /* $num =0;
+    while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+        $num +=1; 
+        print_r("<br><br>Registro numero $num");
+        print_r($row);
+
+    }*/
+
+    
+
+
+}
+
 
 
 //SECCION DE DELETES
@@ -97,6 +157,25 @@ function DeleteBD(){//Funcion de prueba
     }
 }
 
+function E_recepcionista($email,$pass){
+    
+    $conn= ConexionBD();
+
+    $sql = "EXEC DeleteEmployee ?,?;";
+    $params = array($email,$pass);
+
+    $stmt = sqlsrv_query( $conn, $sql, $params);
+    
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['id']." valor<br />";
+        return $row['id'];
+    }
+}
+
 
 //SECCION DE UPDATES
 function UpdateBD(){//Funcion de prueba
@@ -111,7 +190,26 @@ function UpdateBD(){//Funcion de prueba
         die( print_r( sqlsrv_errors(), true));
     }
 }
+//Modifica Recepcionista
 
+function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC UpdateEmployee ?,?,?,?,?,?,?,?";
+    $params = array($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp,);
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
+
+    sqlsrv_free_stmt( $stmt);
+
+}
 
 //SECCION DE SELECTS
 

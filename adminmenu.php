@@ -21,10 +21,10 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Agregar (?)</h3>
+                    <h3>Agregar usuario</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
-                        Agregar
+                    <a href="A_recepcionista.php" class="boton-amarillo-block">
+                        Agregar recepcionista
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -34,10 +34,10 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Eliminar (?)</h3>
+                    <h3>Eliminar usuario</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
-                        Eliminar
+                    <a href="E_recepcionista.php" class="boton-amarillo-block">
+                        Eliminar recepcionista
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -47,10 +47,10 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Modificar (?)</h3>
+                    <h3>Modificar usuario</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
-                        Modificar
+                    <a href="M_recepcionista.php" class="boton-amarillo-block">
+                        Modificar recepcionista
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
@@ -60,10 +60,10 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Buscar (?)</h3>
+                    <h3>Buscar usuario</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
-                        Buscar
+                    <a href="B_recepcionista.php" class="boton-amarillo-block">
+                        Buscar recepcionista
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
