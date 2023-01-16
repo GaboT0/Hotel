@@ -28,7 +28,7 @@ if($exist == "3"){
       print 'alert("Usuario o contraseña equivocada");';
       print "window.location= 'login.php'";
       print '</script>';
-      //header("location:login.php");
+      header("location:login.php");
     ?>
     
   <!-- <h1 >ERROR DE AUTENTIFICACION</h1> -->
