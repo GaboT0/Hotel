@@ -10,20 +10,14 @@ $contraseña=$_POST['password'];
 
 $exist = validarPass($usuario,$contraseña);
 
-if($exist == "3"){
-    header("location:adminmenu.php");
+if($exist == "1"){
+    header("location:clientemenu.php");
     ?>
     
   <!-- <h1 > AUTENTIFICACION</h1> -->
   <?php
     print $exist;
-}else if ($exist == "1" or $exist == "2"){
-  header("location:habitacion.php");
-  ?>
-  
-<!-- <h1 > AUTENTIFICACION</h1> -->
-<?php
-}else{
+}else {
   print '<script language="JavaScript">';
       print 'alert("Usuario o contraseña equivocada");';
       print "window.location= 'login.php'";

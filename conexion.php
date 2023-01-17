@@ -208,6 +208,22 @@ function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp){
     }
 }
 
+function M_Huesped($id,$nombre,$app,$apm,$dir,$telefono){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC UpdateHuesped ?,?,?,?,?,?";
+    $params = array($id,$nombre,$app,$apm,$dir,$telefono);
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
+}
+
 //SECCION DE SELECTS
 
 function SelectBD(){//Funcion de prueba

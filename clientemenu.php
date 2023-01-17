@@ -14,16 +14,16 @@
 <h1>Bienvenido Cliente</h1>
     <main class="contenedor seccion">
     <!---Menu-->
-    <div class="contenedor-anunciosad">
+    <div class="contenedor-anuncios">
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/agregar.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Reservar (?)</h3>
+                    <h3>Reservar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="anuncio.php" class="boton-amarillo-block">
                         Reservar
                     </a>
                 </div><!--.contenido-anuncio-->
@@ -34,9 +34,9 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Cancelar (?)</h3>
+                    <h3>Cancelar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="anuncio.php" class="boton-amarillo-block">
                         Cancelar
                     </a>
                 </div><!--.contenido-anuncio-->
@@ -47,9 +47,9 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Modificar (?)</h3>
+                    <h3>Modificar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="M_Huesped.php" class="boton-amarillo-block">
                         Modificar
                     </a>
                 </div><!--.contenido-anuncio-->
