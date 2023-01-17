@@ -1,6 +1,6 @@
 <?php
         //include './includes/templates/header.php';
-        require './conexion.php';
+        //require './conexion.php';
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +23,13 @@
                 <div class="contenido-anuncio">
                     <h3>Reservar</h3>
                     
-                    <a href=".php" class="boton-amarillo-block">
+                    <a href="reservaUsuario.php" class="boton-amarillo-block">
                         Reservar
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/menos.jpg" alt="anuncio">
@@ -41,6 +43,8 @@
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/update.png" alt="anuncio">

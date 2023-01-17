@@ -28,6 +28,7 @@
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+            
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/menos.jpg" alt="anuncio">
