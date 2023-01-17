@@ -80,6 +80,20 @@
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+            <div class="anuncio">
+                <picture>
+                    <img loading="lazy" src="build/img/search.png" alt="anuncio">
+                </picture>
+
+                <div class="contenido-anuncio">
+                    <h3>Consulta Reserva-Empleados</h3>
+                    
+                    <a href="B_reserv_view.php" class="boton-amarillo-block">
+                        Consultar
+                    </a>
+                </div><!--.contenido-anuncio-->
+            </div><!--anuncio-->
             
         </div> <!--.contenedor-anuncios-->
 

@@ -10,3 +10,5 @@ Reservaciones.CostoF
 from 
 Empleados join Reservaciones 
 on Empleados.idEmpl = Reservaciones.idEmpl;
+
+Select * from reserv_view_employees

@@ -142,6 +142,8 @@ function B_recepcionista($email){
 
 
 
+
+
 //SECCION DE DELETES
 
 function DeleteBD(){//Funcion de prueba

@@ -921,3 +921,12 @@ input{
 		font-size: 18px;
 	}
 	/*Fin de Menù lateral*/
+
+    th{
+        color: #fff;
+        font-size: 1.9rem;
+    }
+    tr{
+        color: #fff; 
+        font-size: 1.4rem;  
+    }
