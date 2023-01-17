@@ -60,7 +60,7 @@ Buscar usuario Ingresa correo electronico:
                     <div class="input-contenedor">
                     <i class="fas fa-envelope icon"></i>
                     <p>ID Usuario</p>
-                    <input type="text"  name="idempl" value="<?=$row[0]?>" >
+                    <input type="text" readonly="readonly" name="idempl" value="<?=$row[0]?>" >
                     </div>
       
                     <div class="input-contenedor">

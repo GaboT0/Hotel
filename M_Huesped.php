@@ -1,5 +1,5 @@
 <?php
-        include './includes/templates/header_admin.php';
+        include './includes/templates/header_usuarios.php';
         require './conexion.php';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -60,7 +60,7 @@ Buscar usuario Ingresa correo electronico:
                     <div class="input-contenedor">
                     <i class="fas fa-envelope icon"></i>
                     <p>ID Usuario</p>
-                    <input type="text"  name="id" value="<?=$row[0]?>" >
+                    <input type="text" readonly="readonly"  name="id" value="<?=$row[0]?>" >
                     </div>
       
                     <div class="input-contenedor">

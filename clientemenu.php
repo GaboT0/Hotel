@@ -23,7 +23,7 @@
                 <div class="contenido-anuncio">
                     <h3>Reservar</h3>
                     
-                    <a href="anuncio.php" class="boton-amarillo-block">
+                    <a href=".php" class="boton-amarillo-block">
                         Reservar
                     </a>
                 </div><!--.contenido-anuncio-->
@@ -36,7 +36,7 @@
                 <div class="contenido-anuncio">
                     <h3>Cancelar</h3>
                     
-                    <a href="anuncio.php" class="boton-amarillo-block">
+                    <a href=".php" class="boton-amarillo-block">
                         Cancelar
                     </a>
                 </div><!--.contenido-anuncio-->

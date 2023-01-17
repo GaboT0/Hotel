@@ -176,6 +176,25 @@ function E_recepcionista($email,$pass){
     }
 }
 
+function E_Huesped($email,$pass){
+    
+    $conn= ConexionBD();
+
+    $sql = "EXEC DeleteHuesped ?,?;";
+    $params = array($email,$pass);
+
+    $stmt = sqlsrv_query( $conn, $sql, $params);
+    
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['id']." valor<br />";
+        return $row['id'];
+    }
+}
+
 
 //SECCION DE UPDATES
 function UpdateBD(){//Funcion de prueba
