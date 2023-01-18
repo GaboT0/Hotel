@@ -38,7 +38,7 @@
                 <div class="contenido-anuncio">
                     <h3>Cancelar</h3>
                     
-                    <a href=".php" class="boton-amarillo-block">
+                    <a href="cancelarReservaUsuario.php" class="boton-amarillo-block">
                         Cancelar
                     </a>
                 </div><!--.contenido-anuncio-->

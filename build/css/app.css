@@ -298,7 +298,6 @@ h4 {
     text-align: center;
     display: inline-block;
     border: none
-
 }
 
 .boton-verde:hover {
@@ -962,3 +961,22 @@ h6 {
 .bookrooms text{
     background-color: #333;
 }
+
+.gridroomscancelar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    padding:20px;
+}
+
+.boton-rojo {
+    background-color: red;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    display: inline-block;
+    border: none
+}
+
+
