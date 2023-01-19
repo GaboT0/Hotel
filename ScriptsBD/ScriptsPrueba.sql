@@ -13,3 +13,7 @@ Función para validar la disponibilidad de una habitación
 fecha inicial,fecha final,id_habitacion
 */
 select dbo.validar_fecha_reservacion('20230115','20230120',1)
+/*
+Vista para obtener las reservaciones realizadas por usuario
+*/
+select * from reserv_view_employees;
