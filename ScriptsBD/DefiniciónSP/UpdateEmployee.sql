@@ -10,19 +10,61 @@ GO
 
 create procedure [dbo].[UpdateEmployee]
  @idEmpl int,
- @NewNombre nvarchar(50),
- @NewApP nvarchar(50),
- @NewApM nvarchar(50),
+ @NewName nvarchar(50),
+ @NewApP nvarchar(100),
+ @NewApM nvarchar(100),
+ @NewDir nvarchar(100),
+ @NewTel nvarchar(12),
  @NewtipoEmp int
  as
- 
-Update
+ declare @ex int = 0
+Select @ex=count(*) from Empleados Where idEmpl=@idEmpl
+IF @ex = 1
+begin
+	Update
 	Empleados
-	set Nombre=@NewNombre,
+	set Nombre=@NewName,
 		ApP=@NewApP,
-		ApM=@NewApP,
+		ApM=@NewApM,
+		Dir=@NewDir,
+		Telefono=@NewTel,
 		TipoEm=@NewtipoEmp
 	where idEmpl=@idEmpl
+	Select @ex as exist
+END	
+ELSE
+	Select @ex as exist
 GO
 
+DROP PROCEDURE UpdateEmployee
+EXEC UpdateEmployee 6,'Omar','Torres','Porres','Dovetal','5542424242',2
 
+
+-- UPDATE HUESPED
+create procedure [dbo].[UpdateHuesped]
+ @id int,
+ @NewName nvarchar(50),
+ @NewApP nvarchar(100),
+ @NewApM nvarchar(100),
+ @NewDir nvarchar(100),
+ @NewTel nvarchar(12)
+ as
+ declare @ex int = 0
+Select @ex=count(*) from Huesped Where idHues=@id
+IF @ex = 1
+begin
+	Update
+	Empleados
+	set Nombre=@NewName,
+		ApP=@NewApP,
+		ApM=@NewApM,
+		Dir=@NewDir,
+		Telefono=@NewTel,
+	where idEmpl=@idEmpl
+	Select @ex as exist
+END	
+ELSE
+	Select @ex as exist
+
+DROP PROCEDURE UpdateHuesped
+EXEC UpdateHuesped 1,'Jeromy','Nelthorp','Mum','International','6087384170'

@@ -125,7 +125,7 @@
                 <div class="contenido-anuncio">
                     <h3>SUITE CON UNA RECÁMARA DE THE GRAND MAYAN</h3>
                     <p>La Suite con una recámara cuenta con una habitación con cama king-size, sala de estar con comedor y cocina y un baño. También tiene terraza con piscina pequeña privada y dos TVs.</p>
-                    <p class="precio">$4599.00 MXN</p>
+                    <p class="precio">$2599.00 MXN</p>
 
                     <ul class="iconos-caracteristicas">
                         <li>
@@ -155,9 +155,9 @@
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>SSUITE CON DOS RECÁMARAS DE THE GRAND MAYAN</h3>
+                    <h3>SUITE CON DOS RECÁMARAS DE THE GRAND MAYAN</h3>
                     <p>Este espacio cuenta con cocina, sala de estar, terraza privada con piscina pequeña, dos recámaras con camas king-size y dos baños.</p>
-                    <p class="precio">$2999.00 MXN</p>
+                    <p class="precio">$4599.00 MXN</p>
 
                     <ul class="iconos-caracteristicas">
                         <li>

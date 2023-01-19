@@ -24,10 +24,9 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="build/img/dark-mode.svg">
                     <nav class="navegacion">
-                   
-                        <a href="login.php">Cerrar sesión</a>
-                        <a href=""></a>
-                        <p>Menu</P>
+                        <a href="clientemenu.php">Regresar</a>
+                        <a href="index.php">Cerrar sesión</a>
+                        
                         <!-- MENU LATERAL -->
                         <div class="btn-menu"> 
                         <label for="btn-menu">&nbsp;☰&nbsp;</label>

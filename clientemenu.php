@@ -1,6 +1,6 @@
 <?php
         //include './includes/templates/header.php';
-        require './conexion.php';
+        //require './conexion.php';
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,42 +14,46 @@
 <h1>Bienvenido Cliente</h1>
     <main class="contenedor seccion">
     <!---Menu-->
-    <div class="contenedor-anunciosad">
+    <div class="contenedor-anuncios">
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/agregar.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Reservar (?)</h3>
+                    <h3>Reservar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="reservaUsuario.php" class="boton-amarillo-block">
                         Reservar
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/menos.jpg" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Cancelar (?)</h3>
+                    <h3>Cancelar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="cancelarReservaUsuario.php" class="boton-amarillo-block">
                         Cancelar
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
+
+
             <div class="anuncio">
                 <picture>
                     <img loading="lazy" src="build/img/update.png" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio">
-                    <h3>Modificar (?)</h3>
+                    <h3>Modificar</h3>
                     
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="M_Huesped.php" class="boton-amarillo-block">
                         Modificar
                     </a>
                 </div><!--.contenido-anuncio-->

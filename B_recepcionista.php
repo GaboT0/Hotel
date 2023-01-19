@@ -41,17 +41,17 @@
       
             <p>
 
-Buscar recepcionista: 
+            Buscar usuario Ingresa correo electronico:
 <input type="search" name="Correo" size="200" maxlength="200">
 
-<input type="submit" value="Buscar">
+<input type="submit" class="boton-amarillo" value="Buscar">
 
 </p>
     </form>
 
 
     <h2>Usuario</h2>
-    <table>
+    <!-- <table>
         <th>Id&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th>Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th>Apellido Paterno&nbsp;&nbsp;&nbsp;</th>
@@ -59,29 +59,89 @@ Buscar recepcionista:
         <th>Dirección&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th>Correo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th>Teléfono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th>Tipo Empleado&nbsp;&nbsp;&nbsp;</th>
+        <th>Tipo Empleado&nbsp;&nbsp;&nbsp;</th> -->
 
         <?php
-        $conn=ConexionBD();
-        $query="SELECT * FROM Empleados where correo='$email';";
-        $res=sqlsrv_query($conn,$query);
-        while ($row=sqlsrv_fetch_array($res)){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+          $conn=ConexionBD();
+          $query="SELECT * FROM Empleados where correo='$email';";
+          $res=sqlsrv_query($conn,$query);
+          while ($row=sqlsrv_fetch_array($res)){
         ?>
 
-        <tr><td><?=$row[0]?></td>
+        <!-- <tr><td><?=$row[0]?></td>
         <td><?=$row[1]?></td>&nbsp
         <td><?=$row[2]?></td>&nbsp
         <td><?=$row[3]?></td>&nbsp
         <td><?=$row[4]?></td>&nbsp;&nbsp;
         <td><?=$row[5]?></td>&nbsp
         <td><?=$row[6]?></td>&nbsp
-        <td><?=$row[7]?></td></tr>&nbsp
+        <td><?=$row[7]?></td></tr>&nbsp -->
+        <form class="formulario" method="POST" action="./modifica_r.php">
+                    <div class="input-contenedor">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>ID Usuario</p>
+                    <input type="text" disabled name="idempl" value="<?=$row[0]?>" >
+                    </div>
+      
+                    <div class="input-contenedor">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>Nombre</p>
+                    <input type="text"  disabled name="nombre" value="<?=$row[1]?>" >
+                    
+                    </div>
+                    
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Apellido Paterno</p>
+                    <input type="text" disabled name="app" value="<?=$row[2]?>">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Apellido Materno</p>
+                    <input type="text" disabled name="apm" value="<?=$row[3]?>">
+                    </div>
+
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Dirección</p>
+                    <input type="text" disabled name="dir" value="<?=$row[4]?>">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Correo</p>
+                    <input type="text" disabled name="dir" value="<?=$row[5]?>">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Teléfono</p>
+                    <input type="tel" disabled name="telefono" value="<?=$row[6]?>">
+                    </div>
+
+                    <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <p>Tipo de Usuario</p>
+                    <input type="text" disabled name="tipoemp" value="<?=$row[7]?>">
+                    </div>
+
 
         <?php
         }
+      }
         ?>
 
-    </table>
+
+    </form>
+        <!-- <?php
+      //   }
+      // }
+        ?> -->
+
+    <!-- </table> -->
 
                     
                 

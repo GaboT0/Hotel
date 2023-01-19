@@ -17,7 +17,7 @@ function ConexionBD(){//Funcion de prueba
         echo "<br />";
 
     }else{
-        echo "Conexión no se pudo establecer CONEXION.<br />";
+        echo "Conexión no se pudo establecer.<br />";
         die( print_r( sqlsrv_errors(), true));
     }
     return $conn;
@@ -25,7 +25,7 @@ function ConexionBD(){//Funcion de prueba
 }
 //ConexionBD();
 
- //$c=ConexionBD();
+//  $c=ConexionBD();
 
 
 //SECCION DE INSERTS
@@ -142,6 +142,8 @@ function B_recepcionista($email){
 
 
 
+
+
 //SECCION DE DELETES
 
 function DeleteBD(){//Funcion de prueba
@@ -176,6 +178,25 @@ function E_recepcionista($email,$pass){
     }
 }
 
+function E_Huesped($email,$pass){
+    
+    $conn= ConexionBD();
+
+    $sql = "EXEC DeleteHuesped ?,?;";
+    $params = array($email,$pass);
+
+    $stmt = sqlsrv_query( $conn, $sql, $params);
+    
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['id']." valor<br />";
+        return $row['id'];
+    }
+}
+
 
 //SECCION DE UPDATES
 function UpdateBD(){//Funcion de prueba
@@ -191,12 +212,12 @@ function UpdateBD(){//Funcion de prueba
     }
 }
 //Modifica Recepcionista
-
-function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp){
+//$idemp,  ?, $idemp,
+function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp){
     $conn= ConexionBD();
     
-    $sql = "EXEC UpdateEmployee ?,?,?,?,?,?,?,?";
-    $params = array($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp,);
+    $sql = "EXEC UpdateEmployee ?,?,?,?,?,?,?";
+    $params = array($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp);
     $stmt = sqlsrv_query( $conn, $sql,$params);
     if( $stmt === false) {
         die( print_r( sqlsrv_errors(), true) );
@@ -206,9 +227,22 @@ function M_recepcionista($idemp,$nombre,$app,$apm,$dir,$email,$telefono,$tipoemp
         echo $row['exist']." valor<br />";
         return $row['exist'];
     }
+}
 
-    sqlsrv_free_stmt( $stmt);
+function M_Huesped($id,$nombre,$app,$apm,$dir,$telefono){
+    $conn= ConexionBD();
+    
+    $sql = "EXEC UpdateHuesped ?,?,?,?,?,?";
+    $params = array($id,$nombre,$app,$apm,$dir,$telefono);
+    $stmt = sqlsrv_query( $conn, $sql,$params);
+    if( $stmt === false) {
+        die( print_r( sqlsrv_errors(), true) );
+    }
 
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+        echo $row['exist']." valor<br />";
+        return $row['exist'];
+    }
 }
 
 //SECCION DE SELECTS

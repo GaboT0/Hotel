@@ -1,5 +1,5 @@
 <?php
-        include './includes/templates/header_admin.php';
+        include './includes/templates/header_usuarios.php';
         require './conexion.php';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -30,7 +30,7 @@
 
     
     <!---Agrega recepcionista-->
-        <form class="formulario" method="POST" action="./M_recepcionista.php">
+        <form class="formulario" method="POST" action="./M_Huesped.php">
       
             <p>
 
@@ -49,18 +49,18 @@ Buscar usuario Ingresa correo electronico:
         <?php
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
           $conn=ConexionBD();
-          $query="SELECT * FROM Empleados where correo='$email';";
+          $query="SELECT * FROM Huesped where correo='$email';";
           $res=sqlsrv_query($conn,$query);
           while ($row=sqlsrv_fetch_array($res)){
         
         
         ?>
 
-        <form class="formulario" method="POST" action="./modifica_r.php">
+        <form class="formulario" method="POST" action="./modifica_h.php">
                     <div class="input-contenedor">
                     <i class="fas fa-envelope icon"></i>
                     <p>ID Usuario</p>
-                    <input type="text" readonly="readonly" name="idempl" value="<?=$row[0]?>" >
+                    <input type="text" readonly="readonly"  name="id" value="<?=$row[0]?>" >
                     </div>
       
                     <div class="input-contenedor">
@@ -95,11 +95,6 @@ Buscar usuario Ingresa correo electronico:
                     <input type="tel" name="telefono" value="<?=$row[6]?>">
                     </div>
 
-                    <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <p>Tipo de Usuario</p>
-                    <input type="text" name="tipoemp" value="<?=$row[7]?>">
-                    </div>
 
                     <input type="submit" value="Modificar" class="button">
 

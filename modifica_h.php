@@ -1,20 +1,19 @@
 <?php
 require './conexion.php';
 
-$idemp= $_POST['idempl'];
+$id= $_POST['id'];
 $nombre = $_POST['nombre'];
 $app = $_POST['app'];
 $apm = $_POST['apm'];
 $dir= $_POST['dir'];
-// $email= $_POST['email'];
 $telefono= $_POST['telefono'];
-$tipoemp= $_POST['tipoemp'];
+
 //session_start();
 //$_SESSION['usuario']=$usuario;
 
 
 //$idemp,
-$exist = M_recepcionista($idemp,$nombre,$app,$apm,$dir,$telefono,$tipoemp);
+$exist = M_Huesped($id,$nombre,$app,$apm,$dir,$telefono);
 
 if($exist == "0"){
     print '<script language="JavaScript">';
@@ -24,7 +23,7 @@ if($exist == "0"){
 }else{
     print '<script language="JavaScript">';
     print 'alert("Se modifico correctamente ");';
-    print "window.location= 'M_recepcionista.php'";
+    print "window.location= 'M_Huesped.php'";
    // print "window.location= 'adminmenu.php'";
     print '</script>';
 }
